@@ -6,6 +6,9 @@ router.get("/", async function (req, res) {
 if (req.query.species == 'dog'){
 // ten per cent discount on these three breeds 
 
+function getBreeds(){}
+
+
  if(req.query.breeds =='Labrador'||req.query.breeds =='Chihuahua'||req.query.breeds =='Husky'){
 price= price*0.9
  }
@@ -61,7 +64,7 @@ res.json({
 }
 
 if (req.query.species == 'cat'){
-    
+
     if(req.query.breeds =='Persian'||req.query.breeds =='Sphynx'||req.query.breeds =='Bengal'){
         price= price*0.9
          }
