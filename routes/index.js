@@ -62,7 +62,7 @@ res.json({
 
 if (req.query.species == 'cat'){
     
-    if(req.query.breeds =='Labrador'||req.query.breeds =='Chihuahua'||req.query.breeds =='Husky'){
+    if(req.query.breeds =='Persian'||req.query.breeds =='Sphynx'||req.query.breeds =='Bengal'){
         price= price*0.9
          }
         
