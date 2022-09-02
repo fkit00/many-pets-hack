@@ -15,6 +15,6 @@ export function query(text, params, callback){
     return pool.query(text, params, callback)
   }
 
-  let res =  await query('SELECT NOW()')
+/*   let res =  await query('SELECT NOW()')
 
- console.log(res) 
+ console.log(res)  */

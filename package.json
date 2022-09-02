@@ -7,6 +7,7 @@
   "scripts": {
     "db:test": "node -r dotenv/config ./db/index.js",
     "db:createPetsTable":"node -r dotenv/config ./db/scripts/createPetsTable.js",
+    "db:dropPetsTable":"node -r dotenv/config ./db/scripts/dropPetsTable.js",
     "start": " nodemon ./app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
