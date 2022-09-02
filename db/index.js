@@ -2,6 +2,8 @@
 //export our query 
 
 import pg from 'pg'
+import dotenv from "dotenv";
+dotenv.config();
 
 const connectionString = process.env.PGURL
 
