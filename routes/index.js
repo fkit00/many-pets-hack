@@ -1,5 +1,5 @@
 import express from "express";
-import { getRefByID } from '../models/index.js'
+import { getRefByID, postPet } from '../models/index.js'
 
 export const router = express.Router();
 
@@ -13,8 +13,16 @@ res.json({
 })
 return
     }
-})
+});
 
+router.post("/", async function (req, res) {
+    if(req.body !== undefined) {
+    const newPet = req.body;
+    const result =  await postPet(newPet);
+    res.json({ success: true, payload: result });   
+    }
+    
+});
 
 export default router;
 

@@ -1,13 +1,16 @@
 import { query } from '../db/index.js'
 
+
 export async function getRefByID(id){
     const res = await query(`SELECT * FROM pets WHERE ref= $1;`, [id]);
     const petsArray = res.rows;
     return petsArray
 }
 
-
-
+export async function postPet(species, breeds, city, age, ref) {
+    const data = await query(`INSERT INTO pets (species, breeds, city, age, ref) VALUES ($1, $2, $3, $4, $5) RETURNING *;`, [species, breeds, city, age, ref]);
+    return data.rows;
+  };
 
 function getPrice(){
     let price = 120
