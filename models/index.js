@@ -4,6 +4,7 @@ import { query } from '../db/index.js'
 export async function getRefByID(id){
     const res = await query(`SELECT * FROM pets WHERE ref= $1;`, [id]);
     const petsArray = res.rows;
+    console.log(res.rows)
     return petsArray
 }
 
@@ -108,7 +109,9 @@ export async function postPet(data) {
             return Math.ceil(price)
         }
         
-    
+        //it's an object in an array 
+    // if the array lenght is more than one 
+    // 
     
     
     
